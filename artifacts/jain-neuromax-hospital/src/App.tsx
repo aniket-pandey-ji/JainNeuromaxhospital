@@ -9,7 +9,7 @@ import NotFound from '@/pages/not-found';
 
 const facadeImage = '/assets/hospital-facade.png';
 const interiorImage = '/assets/hospital-interior.png';
-const logoImage = '/assets/jain-neuromax-logo.jpeg';
+const logoImage = '/assets/jain-neuromax-logo.png';
 
 const queryClient = new QueryClient();
 
