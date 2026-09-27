@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Jain Neuromax Hospital"
+description = "A premium specialist healthcare website for Jain Neuromax Hospital, helping patients discover doctors, understand services, and book an appointment with confidence."
+version = "1.0.0"
+id = "artifacts/jain-neuromax-hospital"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23992
+
+[services.development]
+run = "pnpm --filter @workspace/jain-neuromax-hospital run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/jain-neuromax-hospital", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/jain-neuromax-hospital/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23992"
+BASE_PATH = "/"

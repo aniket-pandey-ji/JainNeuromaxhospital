@@ -1,0 +1,1686 @@
+Build a premium, production-ready healthcare website for:
+
+JAIN NEUROMAX HOSPITAL
+
+A modern specialist hospital focused on advanced neurological, neurosurgical and multi-speciality healthcare.
+
+IMPORTANT:
+The uploaded hospital exterior photograph is the PRIMARY visual reference for the hospital's physical identity.
+
+Use the uploaded image as the hero/building reference.
+
+Do not replace the hospital identity with a generic blue hospital template.
+
+The website should visually connect to the actual building shown in the reference image.
+
+============================================================
+1. CORE BRAND DIRECTION
+============================================================
+
+Hospital Name:
+
+JAIN NEUROMAX HOSPITAL
+
+Brand personality:
+
+- Premium
+- Trustworthy
+- Specialist
+- Modern
+- Clinical
+- Human
+- Calm
+- Professional
+- Technology-driven
+- Patient-focused
+
+The website should communicate:
+
+"Advanced specialist healthcare with experienced doctors and modern clinical infrastructure."
+
+The hospital should particularly feel strong in:
+
+- Neurosurgery
+- Neurology
+- Brain & spine care
+- Critical/specialist care
+- Advanced surgical care
+
+However, DO NOT describe the hospital as exclusively neurological unless verified information confirms this.
+
+============================================================
+2. VISUAL IDENTITY
+============================================================
+
+Use the uploaded hospital photograph as the visual foundation.
+
+The building has:
+
+- warm wooden architectural cladding
+- white horizontal architectural panels
+- dark charcoal/grey vertical facade
+- large glass windows
+- warm architectural lighting
+- clean geometric architecture
+- premium private-hospital appearance
+- strong white typography/signage
+- blue sky surrounding the building
+
+Translate this physical identity into the website.
+
+Primary visual palette:
+
+Deep Charcoal:
+#242424
+
+Warm Wood:
+#9A6847
+
+Light Wood:
+#C28A62
+
+Clinical White:
+#FFFFFF
+
+Warm Off-White:
+#F7F5F2
+
+Soft Grey:
+#E8E8E8
+
+Dark Text:
+#171717
+
+Medical Blue:
+#1769AA
+
+Use blue as a medical/accent color rather than making the entire website blue.
+
+The website must NOT look like:
+
+- a generic hospital WordPress template
+- an insurance website
+- a SaaS dashboard
+- a government portal
+- an overly futuristic medical website
+
+It should feel like a premium private hospital.
+
+============================================================
+3. TYPOGRAPHY
+============================================================
+
+Use:
+
+Primary font:
+Inter / Manrope / Plus Jakarta Sans
+
+Optional display font:
+A refined modern sans-serif.
+
+Typography should be:
+
+- bold
+- highly readable
+- spacious
+- premium
+- clinical
+
+Use strong editorial headings.
+
+Example:
+
+"Expert Care.
+Advanced Medicine.
+Closer to You."
+
+Avoid excessive uppercase text.
+
+Use uppercase only for small labels and navigation accents.
+
+============================================================
+4. HEADER
+============================================================
+
+Create a premium sticky header.
+
+Desktop:
+
+LEFT:
+JAIN NEUROMAX HOSPITAL logo/wordmark
+
+CENTER:
+
+Home
+About
+Doctors
+Specialities
+Services
+Facilities
+Patient Care
+Contact
+
+RIGHT:
+
+"Book Appointment"
+
+"Emergency"
+
+The Emergency button should be visually distinct.
+
+Header background:
+
+White / slightly translucent white.
+
+On scroll:
+
+- reduce height slightly
+- subtle shadow
+- slight backdrop blur
+- remain sticky
+
+Mobile:
+
+Logo
+Hamburger menu
+
+Navigation becomes a full-screen/mobile drawer.
+
+============================================================
+5. EMERGENCY ACCESS
+============================================================
+
+Healthcare requires immediate emergency access.
+
+Create a persistent emergency CTA.
+
+Desktop:
+
+"24×7 EMERGENCY"
+
+"Call Now"
+
+Use the actual emergency number only when provided.
+
+DO NOT invent a phone number.
+
+If the phone number is not available, use:
+
+"Emergency Contact — Add Number"
+
+as a content placeholder.
+
+Mobile:
+
+Create a fixed bottom action bar:
+
+[Emergency]
+[Book Appointment]
+[Call Hospital]
+
+The emergency button must be visually noticeable without using aggressive red everywhere.
+
+============================================================
+6. HERO SECTION
+============================================================
+
+The hero is the most important visual section.
+
+Use the uploaded hospital exterior image.
+
+Desktop layout:
+
+LEFT:
+Content
+
+RIGHT:
+Large architectural hospital image
+
+OR:
+
+Use the hospital image as a full-width background with a sophisticated content panel.
+
+Recommended headline:
+
+"Expert Care.
+Advanced Medicine.
+Trusted Specialists."
+
+Alternative:
+
+"Advanced Healthcare,
+Built Around You."
+
+Supporting copy:
+
+"Jain Neuromax Hospital brings together experienced specialists, modern healthcare infrastructure and patient-focused medical care under one roof."
+
+DO NOT make unsupported claims such as:
+
+"Best hospital"
+"No. 1 hospital"
+"World's best"
+"100% success"
+"Guaranteed recovery"
+
+unless independently verified.
+
+Primary CTA:
+
+"Book an Appointment"
+
+Secondary CTA:
+
+"Find a Doctor"
+
+Third action:
+
+"Call Hospital"
+
+Hero should immediately communicate:
+
+- hospital
+- specialist doctors
+- advanced healthcare
+- trust
+- accessibility
+
+============================================================
+7. HERO VISUAL TREATMENT
+============================================================
+
+Use the uploaded image carefully.
+
+Do NOT crop out:
+
+- hospital signage
+- main architectural facade
+- "JAIN NEUROMAX HOSPITAL"
+- doctor names visible on the building
+
+Maintain the architectural proportions.
+
+Use:
+
+object-fit: cover
+
+but select a crop that preserves the hospital identity.
+
+Add subtle image overlay only if required for text readability.
+
+Do not heavily darken the building.
+
+The building itself should remain recognizable.
+
+============================================================
+8. TRUST STRIP
+============================================================
+
+Immediately below hero.
+
+Create a clean trust strip.
+
+Possible metrics:
+
+Experienced Specialists
+Advanced Care
+Modern Infrastructure
+Patient-focused Services
+
+IMPORTANT:
+
+Do not invent numerical statistics.
+
+If verified statistics become available later, support:
+
+Beds
+Doctors
+Years of Experience
+Departments
+Procedures
+Patients
+
+Until then, use qualitative trust indicators rather than fabricated numbers.
+
+============================================================
+9. ABOUT HOSPITAL
+============================================================
+
+Section heading:
+
+"Care That Puts Patients First"
+
+Create a premium split-layout section.
+
+LEFT:
+
+Hospital interior/exterior image.
+
+RIGHT:
+
+Short hospital introduction.
+
+Suggested copy:
+
+"Jain Neuromax Hospital is committed to delivering accessible, specialist medical care through experienced clinicians, modern facilities and a patient-first approach."
+
+Add:
+
+"Learn More About Us →"
+
+Do not invent founding year, bed count, accreditation, awards or patient statistics.
+
+============================================================
+10. SPECIALIST FOCUS
+============================================================
+
+Create a strong visual section emphasizing the hospital's specialist identity.
+
+Heading:
+
+"Specialist Care Across Critical Medical Needs"
+
+Feature:
+
+Brain & Spine Care
+Neurology
+Neurosurgery
+Cardiology
+Gastroenterology
+Nephrology
+Urology
+Orthopaedics
+Pulmonology
+General Medicine
+General & Laparoscopic Surgery
+Obstetrics & Gynaecology
+Pediatrics
+Plastic & Reconstructive Surgery
+Dentistry
+
+Only display a speciality when it is supported by the provided doctor data or verified hospital information.
+
+Each card contains:
+
+Icon
+Speciality name
+Short description
+"View Department →"
+
+============================================================
+11. FEATURED NEURO / BRAIN & SPINE SECTION
+============================================================
+
+Because the hospital is named:
+
+JAIN NEUROMAX HOSPITAL
+
+create a dedicated specialist section.
+
+Heading:
+
+"Advanced Brain & Spine Care"
+
+Possible areas:
+
+Neurology
+Neurosurgery
+Spine Care
+Neuro-critical Care
+Brain & Spine Surgery
+
+IMPORTANT:
+
+Only include specific treatments/procedures after verification.
+
+Do not invent technologies such as:
+
+- Gamma Knife
+- CyberKnife
+- Deep Brain Stimulation
+- Neuro-navigation
+- Intraoperative MRI
+- Robotic surgery
+
+unless confirmed.
+
+Visual:
+
+Large clinical image on left.
+
+Content on right.
+
+CTA:
+
+"Explore Neurology & Neurosurgery"
+
+============================================================
+12. DOCTOR DIRECTORY
+============================================================
+
+Create one of the most important sections:
+
+"Meet Our Specialists"
+
+Subheading:
+
+"Experienced doctors across multiple medical disciplines."
+
+Use a premium doctor card grid.
+
+Each card:
+
+Doctor photograph
+Doctor name
+Designation
+Speciality
+Qualifications
+"View Profile"
+"Book Appointment"
+
+DO NOT fabricate doctor photographs.
+
+If photographs are not supplied:
+
+use an elegant professional placeholder avatar rather than random AI-generated faces.
+
+============================================================
+13. DOCTOR DATA
+============================================================
+
+Use this doctor dataset.
+
+IMPORTANT:
+
+The website must use data-driven rendering.
+
+Create:
+
+/data/doctors.ts
+
+Do not hardcode individual cards.
+
+VERIFIED / PROVIDED INFORMATION:
+
+1.
+
+Dr. Navneet Kala
+
+Designation:
+Consultant | Neurosurgery
+
+Qualifications:
+MBBS
+MS General Surgery
+MCh Neurosurgery
+
+--------------------------------
+
+2.
+
+Dr. Madhuri Jain
+
+Designation:
+Consultant | Dentistry
+
+Qualification:
+BDS
+
+IMPORTANT:
+Qualification should be marked as requiring hospital confirmation before publication.
+
+--------------------------------
+
+3.
+
+Dr. Subhankit Aarya
+
+Designation:
+Consultant | General Medicine
+
+Qualification:
+MD Medicine
+
+--------------------------------
+
+4.
+
+Dr. Naveen Singh
+
+Designation:
+Consultant | Pediatrics
+
+Qualification:
+MD Pediatrics
+
+--------------------------------
+
+5.
+
+Dr. Shoolpani Mishra
+
+Designation:
+Consultant | Gastroenterology
+
+Qualifications:
+MBBS
+MD Medicine
+DM Gastroenterology
+
+--------------------------------
+
+6.
+
+Dr. Kunal Singh
+
+Designation:
+Consultant | Cardiology
+
+Qualification:
+DM Cardiology
+
+--------------------------------
+
+7.
+
+Dr. Rishab Tripathi
+
+Designation:
+Consultant | Orthopaedics
+
+Qualifications:
+MBBS
+DNB
+
+--------------------------------
+
+8.
+
+Dr. Essar Khan
+
+Designation:
+Consultant | Nephrology
+
+Qualifications:
+MBBS
+MD
+DM Nephrology
+
+--------------------------------
+
+9.
+
+Dr. Ravi Prakash Mishra
+
+Designation:
+Consultant | Urology
+
+Qualifications:
+MBBS
+DNB General Surgery
+MNAMS
+MCh Urology
+
+--------------------------------
+
+10.
+
+Dr. Durgesh Tripathi
+
+Designation:
+Consultant | General & Laparoscopic Surgery
+
+Qualifications:
+MBBS
+MS General Surgery
+
+--------------------------------
+
+11.
+
+Dr. Avishesh Singh
+
+Designation:
+Consultant | Cardiology
+
+Qualifications:
+MBBS
+MD Medicine
+DM Cardiology
+
+--------------------------------
+
+12.
+
+Dr. Shivam Pandey
+
+Designation:
+Consultant | Pulmonology
+
+Qualification:
+MD Chest
+
+--------------------------------
+
+13.
+
+Dr. Anamika Modi
+
+Designation:
+Consultant | Obstetrics & Gynaecology
+
+Qualifications:
+MBBS
+DGO
+
+--------------------------------
+
+14.
+
+Dr. Nitya Nand
+
+Designation:
+Consultant | Plastic & Reconstructive Surgery
+
+Qualifications:
+MBBS
+MS General Surgery
+MCh Plastic Surgery
+
+--------------------------------
+
+15.
+
+Dr. Ankit Modi
+
+Designation:
+Consultant | Urology
+
+Qualifications:
+MBBS
+MS General Surgery
+MCh Urology
+FMAS
+
+============================================================
+14. ADDITIONAL DOCTOR DIRECTORY
+============================================================
+
+The following doctors are part of the supplied hospital doctor list:
+
+Dr. Shoolpani Mishra
+Dr. Prashant Thakur
+Dr. Kunal Singh
+Dr. Pritesh Yadav
+Dr. Shreya Raj
+Dr. DeeraJ Singh
+Dr. Rishab Tripathi
+Dr. Essar Khan
+Dr. Ravi Prakash Mishra
+Dr. Durgesh Tripathi
+Dr. Satya Prakash
+Dr. Avishesh Singh
+Dr. Shashank
+Dr. Shivam Pandey
+Dr. Anamika Modi
+Dr. Nitya Nand
+Dr. Ankit Modi
+Dr. Vaibhav Shahi
+
+Also include:
+
+Dr. Navneet Kala
+Dr. Madhuri Jain
+Dr. Subhankit Aarya
+Dr. Naveen Singh
+
+IMPORTANT:
+
+For doctors where specialty, designation or qualification has NOT been supplied:
+
+DO NOT GUESS.
+
+Display:
+
+"Consultant"
+
+or
+
+"Profile information coming soon"
+
+until verified data is supplied.
+
+============================================================
+15. DOCTOR SEARCH
+============================================================
+
+Create a searchable doctor directory.
+
+Search field:
+
+"Search by doctor name or speciality..."
+
+Filters:
+
+Speciality
+
+- Neurosurgery
+- Neurology
+- Cardiology
+- Gastroenterology
+- Nephrology
+- Urology
+- Orthopaedics
+- Pulmonology
+- General Medicine
+- General Surgery
+- Obstetrics & Gynaecology
+- Pediatrics
+- Plastic & Reconstructive Surgery
+- Dentistry
+
+Sort:
+
+Name
+Speciality
+
+Use client-side filtering.
+
+Create:
+
+/doctors
+
+Individual doctor route:
+
+/doctors/[slug]
+
+============================================================
+16. DOCTOR PROFILE PAGE
+============================================================
+
+Each doctor should have a premium profile.
+
+Structure:
+
+Doctor photograph
+
+Doctor name
+
+Designation
+
+Speciality
+
+Qualifications
+
+About the doctor
+
+Areas of expertise
+
+Consultation information
+
+Appointment CTA
+
+Contact hospital CTA
+
+Related specialists
+
+Do not create medical claims that aren't supplied.
+
+============================================================
+17. APPOINTMENT SYSTEM
+============================================================
+
+Create a premium appointment booking flow.
+
+CTA:
+
+"Book an Appointment"
+
+Form:
+
+Full Name
+Mobile Number
+Email
+Speciality
+Doctor
+Preferred Date
+Preferred Time
+Message
+
+Validation:
+
+- required name
+- Indian phone validation
+- email validation
+- date cannot be in past
+- doctor becomes filtered based on selected speciality
+
+Show:
+
+Loading state
+
+Success state
+
+Error state
+
+For prototype:
+
+use a mock submission service.
+
+Structure the code so a real API can be connected later.
+
+============================================================
+18. SERVICES
+============================================================
+
+Create:
+
+"Hospital Services"
+
+Possible services based on verified departments:
+
+Specialist Consultation
+Emergency Care
+Diagnostic Support
+Surgical Care
+Critical Care
+Outpatient Consultation
+Inpatient Care
+Pharmacy
+Laboratory / Diagnostics
+
+IMPORTANT:
+
+Do not claim 24×7 availability unless verified.
+
+Do not invent:
+
+ICU
+NICU
+PICU
+Blood Bank
+Ambulance
+MRI
+CT
+Cath Lab
+
+unless hospital information confirms these.
+
+============================================================
+19. FACILITIES
+============================================================
+
+Create a visually rich facilities section.
+
+Use cards:
+
+Modern Infrastructure
+Consultation Rooms
+Operation Theatres
+Diagnostic Facilities
+Patient Rooms
+Waiting Areas
+Emergency Facilities
+
+BUT:
+
+Only publish facilities that are actually verified.
+
+Unknown facilities should be placeholders in the CMS/data layer rather than fabricated content.
+
+============================================================
+20. WHY CHOOSE US
+============================================================
+
+Instead of making unsupported "best hospital" claims, use factual trust themes.
+
+Examples:
+
+Experienced Specialists
+
+Patient-Centred Care
+
+Specialist Medical Services
+
+Modern Clinical Environment
+
+Multidisciplinary Care
+
+Accessible Appointment Process
+
+Each item gets:
+
+Icon
+Short factual description
+
+============================================================
+21. PATIENT JOURNEY
+============================================================
+
+Create a visual 4-step section:
+
+01
+Find Your Doctor
+
+02
+Book an Appointment
+
+03
+Consult Our Specialist
+
+04
+Continue Your Care
+
+This section should make the website feel extremely easy to use.
+
+============================================================
+22. TESTIMONIALS
+============================================================
+
+Do NOT fabricate testimonials.
+
+If testimonials are supplied later:
+
+display:
+
+Patient name
+Rating if verified
+Short testimonial
+Date
+
+Otherwise:
+
+do not create fake reviews.
+
+Use a placeholder section in the data architecture for future testimonials.
+
+============================================================
+23. HOSPITAL GALLERY
+============================================================
+
+Create a premium gallery.
+
+Categories:
+
+Hospital Exterior
+Reception
+Waiting Area
+Consultation Rooms
+Patient Rooms
+Medical Facilities
+Doctors
+Hospital Environment
+
+Use the uploaded exterior image as the primary verified image.
+
+Do not use random stock images and present them as photographs of this hospital.
+
+If stock imagery is used:
+
+clearly treat it as illustrative rather than actual hospital photography.
+
+============================================================
+24. LOCATION
+============================================================
+
+Create:
+
+"Visit Jain Neuromax Hospital"
+
+Address should ONLY use verified information.
+
+Do not invent the address.
+
+If address has not been provided:
+
+display:
+
+"Hospital address — add verified address"
+
+Phone:
+
+Use only verified number.
+
+Email:
+
+Use only verified email.
+
+Include:
+
+Get Directions
+
+Call Hospital
+
+Map
+
+Do not hardcode a fake Google Maps location.
+
+============================================================
+25. CONTACT SECTION
+============================================================
+
+Create a clean contact section.
+
+Fields:
+
+Name
+Phone
+Email
+Message
+
+Buttons:
+
+Send Enquiry
+
+Call Hospital
+
+Book Appointment
+
+Add WhatsApp only if a verified WhatsApp number exists.
+
+============================================================
+26. FOOTER
+============================================================
+
+Footer structure:
+
+JAIN NEUROMAX HOSPITAL
+
+"Advanced specialist healthcare with experienced medical professionals and patient-focused care."
+
+Quick Links:
+
+Home
+About
+Doctors
+Specialities
+Services
+Facilities
+Contact
+
+Doctor Departments:
+
+Neurosurgery
+Neurology
+Cardiology
+Gastroenterology
+Nephrology
+Urology
+Orthopaedics
+Pulmonology
+
+Patient:
+
+Book Appointment
+Find a Doctor
+Emergency
+Contact
+
+Legal:
+
+Privacy Policy
+Terms & Conditions
+Medical Disclaimer
+
+============================================================
+27. MOBILE EXPERIENCE
+============================================================
+
+Mobile design is NOT a reduced desktop design.
+
+Create a dedicated mobile UX.
+
+Fixed bottom navigation:
+
+Emergency
+Doctors
+Appointment
+Call
+
+Header:
+
+Logo
+Menu
+
+Hero:
+
+Large hospital image
+
+Headline
+
+Book Appointment
+
+Doctor directory:
+
+Single-column cards.
+
+Specialities:
+
+2-column grid or horizontal scrolling.
+
+Appointment form:
+
+Single column.
+
+Buttons:
+
+Minimum 44px touch targets.
+
+No horizontal overflow.
+
+============================================================
+28. ANIMATIONS
+============================================================
+
+Use Framer Motion.
+
+Keep animations premium and subtle.
+
+Hero:
+
+fade + slight upward movement
+
+Sections:
+
+fade-up on viewport entry
+
+Cards:
+
+translateY(-4px)
+
+Images:
+
+scale 1.02 on hover
+
+Buttons:
+
+subtle elevation
+
+Doctor cards:
+
+smooth hover state
+
+Do not over-animate.
+
+Support:
+
+prefers-reduced-motion.
+
+============================================================
+29. IMAGE HANDLING
+============================================================
+
+The uploaded hospital photograph is a key brand asset.
+
+Use it as:
+
+Hero image
+
+About section image
+
+Potential gallery image
+
+Do not distort it.
+
+Use Next.js Image.
+
+Use responsive srcsets.
+
+Lazy-load images below the fold.
+
+Use WebP/AVIF where possible.
+
+Do not create fake hospital images using AI when real images are available.
+
+============================================================
+30. SEO
+============================================================
+
+Create SEO architecture around the hospital and its actual location.
+
+Potential primary terms:
+
+"Jain Neuromax Hospital"
+
+"Jain Neuromax Hospital [City]"
+
+"Neurosurgery Hospital [City]"
+
+"Neurology Hospital [City]"
+
+"Brain and Spine Hospital [City]"
+
+"Multispeciality Hospital [City]"
+
+IMPORTANT:
+
+Do not assume the city/location.
+
+The location must be verified and inserted dynamically.
+
+Metadata:
+
+title
+description
+canonical
+OpenGraph
+Twitter/X
+
+Structured data:
+
+MedicalOrganization
+
+Hospital
+
+Physician
+
+MedicalSpecialty
+
+LocalBusiness
+
+BreadcrumbList
+
+FAQPage only where legitimate FAQ content exists.
+
+============================================================
+31. TECHNICAL ARCHITECTURE
+============================================================
+
+Use:
+
+Next.js latest stable version
+App Router
+TypeScript
+Tailwind CSS
+shadcn/ui
+Lucide Icons
+Framer Motion
+
+Structure:
+
+/app
+/components
+/data
+/lib
+/public
+/types
+
+Data:
+
+/data/doctors.ts
+/data/specialities.ts
+/data/services.ts
+/data/facilities.ts
+/data/navigation.ts
+/data/hospital.ts
+
+Components:
+
+Header
+MobileMenu
+Hero
+TrustStrip
+AboutHospital
+SpecialityGrid
+SpecialityCard
+FeaturedSpeciality
+DoctorDirectory
+DoctorCard
+DoctorProfile
+AppointmentForm
+ServicesGrid
+FacilityGrid
+PatientJourney
+Gallery
+Contact
+Location
+EmergencyCTA
+Footer
+MobileActionBar
+
+============================================================
+32. DATA SAFETY
+============================================================
+
+THIS IS CRITICAL.
+
+Never invent:
+
+- doctor qualifications
+- medical degrees
+- years of experience
+- awards
+- certifications
+- success rates
+- hospital statistics
+- number of patients
+- bed counts
+- equipment
+- accreditation
+- treatment outcomes
+- emergency availability
+- contact numbers
+- email addresses
+- hospital address
+
+If information is missing:
+
+use a placeholder in the data layer.
+
+Example:
+
+phone: null
+
+address: null
+
+verified: false
+
+The UI should never display fabricated information.
+
+============================================================
+33. ACCESSIBILITY
+============================================================
+
+Target WCAG 2.2 AA.
+
+Include:
+
+semantic HTML
+
+proper heading hierarchy
+
+keyboard navigation
+
+focus states
+
+ARIA labels
+
+accessible forms
+
+screen-reader-friendly navigation
+
+high contrast
+
+alt text
+
+reduced motion
+
+large touch targets
+
+============================================================
+34. PERFORMANCE
+============================================================
+
+Optimize for:
+
+Lighthouse:
+
+Performance > 90
+
+Accessibility > 95
+
+Best Practices > 95
+
+SEO > 95
+
+Use:
+
+Next/Image
+
+lazy loading
+
+code splitting
+
+server components by default
+
+client components only when interaction requires them
+
+optimized fonts
+
+minimal JavaScript
+
+============================================================
+35. PREMIUM VISUAL DETAILS
+============================================================
+
+Add subtle details that make the website feel professionally designed.
+
+Examples:
+
+thin architectural lines inspired by the hospital facade
+
+warm wood-inspired accent blocks
+
+charcoal section dividers
+
+soft clinical white backgrounds
+
+subtle blue medical accents
+
+large photography
+
+editorial spacing
+
+small uppercase section labels
+
+fine borders
+
+soft shadows
+
+subtle image masks
+
+Do NOT use:
+
+excessive rounded corners
+
+giant gradients
+
+neon blue
+
+generic medical illustrations
+
+cartoon doctors
+
+emoji icons
+
+cheap stock photography
+
+============================================================
+36. BRAND VISUAL LANGUAGE
+============================================================
+
+The uploaded building should influence the UI.
+
+Architectural translation:
+
+WOOD
+→ warm accent panels
+
+CHARCOAL
+→ headings / premium dark sections
+
+WHITE
+→ primary background
+
+BLUE
+→ healthcare interaction/accent
+
+GLASS
+→ subtle translucent UI elements only where appropriate
+
+GEOMETRIC FACADE
+→ clean grid layouts
+
+The result should feel like:
+
+"the digital version of this hospital building."
+
+============================================================
+37. HOMEPAGE FINAL ORDER
+============================================================
+
+HEADER
+
+↓
+
+HERO
+Hospital exterior photograph
+
+↓
+
+TRUST STRIP
+
+↓
+
+ABOUT JAIN NEUROMAX HOSPITAL
+
+↓
+
+SPECIALIST CARE
+
+↓
+
+FEATURED BRAIN & SPINE CARE
+
+↓
+
+SPECIALITIES
+
+↓
+
+DOCTORS
+
+↓
+
+WHY CHOOSE US
+
+↓
+
+PATIENT JOURNEY
+
+↓
+
+SERVICES
+
+↓
+
+FACILITIES
+
+↓
+
+HOSPITAL GALLERY
+
+↓
+
+APPOINTMENT CTA
+
+↓
+
+LOCATION
+
+↓
+
+CONTACT
+
+↓
+
+FOOTER
+
+Mobile:
+
+HEADER
+
+↓
+
+HERO
+
+↓
+
+EMERGENCY / APPOINTMENT
+
+↓
+
+TRUST
+
+↓
+
+ABOUT
+
+↓
+
+SPECIALIST CARE
+
+↓
+
+BRAIN & SPINE
+
+↓
+
+SPECIALITIES
+
+↓
+
+DOCTORS
+
+↓
+
+SERVICES
+
+↓
+
+FACILITIES
+
+↓
+
+GALLERY
+
+↓
+
+LOCATION
+
+↓
+
+APPOINTMENT
+
+↓
+
+FOOTER
+
+============================================================
+38. FINAL QUALITY REQUIREMENT
+============================================================
+
+Do not build a generic AI-generated hospital template.
+
+The finished product should look like a website commissioned by a premium healthcare branding and digital agency.
+
+It must feel specific to:
+
+JAIN NEUROMAX HOSPITAL
+
+The uploaded building photograph should be immediately recognizable in the website.
+
+The site should communicate:
+
+TRUST
++
+SPECIALIST EXPERTISE
++
+MODERN MEDICINE
++
+HUMAN CARE
++
+EASY ACCESS TO DOCTORS
+
+The website should be visually impressive within the first 3 seconds while remaining extremely usable for patients aged 25–70.
+
+The most important conversion actions are:
+
+1. Book Appointment
+2. Find a Doctor
+3. Call Hospital
+4. Find Location
+
+Make those actions obvious throughout the website.
+
+Build the complete working website, not a static visual mockup.
