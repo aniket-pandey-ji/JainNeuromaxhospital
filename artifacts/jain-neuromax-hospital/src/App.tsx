@@ -9,6 +9,7 @@ import NotFound from '@/pages/not-found';
 
 const facadeImage = '/assets/hospital-facade.png';
 const interiorImage = '/assets/hospital-interior.png';
+const logoImage = '/assets/jain-neuromax-logo.jpeg';
 
 const queryClient = new QueryClient();
 
@@ -59,8 +60,7 @@ function Header() {
       <header className="nav-shell">
         <div className="site-container flex min-h-[74px] items-center justify-between gap-5">
           <Link href="/" className="brand-mark" data-testid="link-home-brand" onClick={() => setMenuOpen(false)}>
-            <span className="brand-symbol" aria-hidden="true">J</span>
-            <span className="brand-wordmark">Jain Neuromax<span className="brand-submark">Specialist Hospital</span></span>
+            <img className="brand-logo" src={logoImage} alt="Jain Neuromax Hospital logo" />
           </Link>
           <nav className="nav-links hidden items-center gap-7 md:flex" aria-label="Primary navigation">
             {navItems.map((item) => (
@@ -103,8 +103,7 @@ function Footer() {
       <div className="site-container footer-grid">
         <div>
           <Link href="/" className="brand-mark" data-testid="link-footer-brand">
-            <span className="brand-symbol" aria-hidden="true">J</span>
-            <span className="brand-wordmark">Jain Neuromax<span className="brand-submark">Specialist Hospital</span></span>
+            <img className="brand-logo brand-logo-footer" src={logoImage} alt="Jain Neuromax Hospital logo" />
           </Link>
           <p className="mt-6 max-w-[280px]">A calm, considered place for specialist care. Start with the information you need, then take the next step when you are ready.</p>
         </div>
