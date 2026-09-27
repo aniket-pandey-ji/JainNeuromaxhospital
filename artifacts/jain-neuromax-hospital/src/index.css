@@ -157,6 +157,8 @@
 .doctor-card { display: block; min-height: 185px; padding: 22px; background: hsl(var(--card)); text-decoration: none; color: inherit; transition: background-color .25s ease; }
 .doctor-card:hover { background: hsl(var(--muted)); }
 .avatar { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 25px; border-radius: 50%; background: hsl(var(--secondary)); color: hsl(var(--foreground)); font-family: var(--app-font-serif); font-size: 17px; }
+.avatar-photo { overflow: hidden; background: hsl(var(--muted)); }
+.avatar-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; }
 .doctor-card h3 { margin: 0 0 5px; font-size: 16px; }
 .doctor-card p { margin: 0; color: hsl(var(--muted-foreground)); font-size: 12px; line-height: 1.5; }
 .photo-band { min-height: 410px; display: grid; place-items: center; background-color: hsl(var(--foreground)); background-position: center; background-size: cover; }
@@ -201,11 +203,14 @@
 .detail-hero { padding: 55px 0; background: hsl(var(--muted)); }
 .doctor-profile { display: grid; grid-template-columns: 190px 1fr; gap: 35px; align-items: center; }
 .profile-avatar { display: grid; place-items: center; width: 170px; height: 170px; border-radius: 50%; background: hsl(var(--secondary)); color: hsl(var(--foreground)); font-family: var(--app-font-serif); font-size: 43px; }
+.profile-photo { overflow: hidden; }
+.profile-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; }
 .doctor-profile h1 { margin: 9px 0; font-size: clamp(34px, 5vw, 54px); line-height: 1.06; letter-spacing: -.04em; }
 .doctor-profile p { color: hsl(var(--muted-foreground)); }
 .profile-content { display: grid; grid-template-columns: 1.15fr .85fr; gap: 75px; }
 .profile-content h2 { margin: 0 0 17px; font-family: var(--app-font-serif); font-size: 27px; }
 .profile-content p { color: hsl(var(--muted-foreground)); line-height: 1.8; }
+.profile-note { margin-top: 12px; font-size: 13px; }
 .qual-list { margin: 0; padding: 0; list-style: none; }
 .qual-list li { padding: 15px 0; border-bottom: 1px solid hsl(var(--border)); color: hsl(var(--muted-foreground)); font-size: 13px; }
 .qual-list li:before { content: '—'; margin-right: 11px; color: hsl(var(--accent)); }

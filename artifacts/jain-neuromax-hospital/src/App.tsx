@@ -18,17 +18,23 @@ type Doctor = {
   name: string;
   specialty: string;
   qualifications: string[];
+  designation?: string;
+  image?: string;
+  bio?: string;
+  experience?: string;
+  training?: string;
 };
 
 const doctors: Doctor[] = [
-  { slug: 'navneet-kala', name: 'Dr. Navneet Kala', specialty: 'Neurosurgery', qualifications: ['MBBS', 'MS General Surgery', 'MCh Neurosurgery'] },
+  { slug: 'navneet-kala', name: 'Dr. Navneet Kala', specialty: 'Neurosurgery', designation: 'Consultant Neurosurgeon', qualifications: ['MBBS', 'MS General Surgery', 'MCh Neurosurgery'], image: '/assets/dr-navneet-kala.png', bio: 'Dr. Navneet Kala is a Consultant Neurosurgeon in Gorakhpur with MBBS, MS (General Surgery) and MCh (Neurosurgery) qualifications.', experience: '23+ years of experience in neurosurgery.', training: 'Trained at SMS Medical College, Jaipur and KGMU, Lucknow.' },
   { slug: 'madhuri-jain', name: 'Dr. Madhuri Jain', specialty: 'Dentistry', qualifications: ['BDS', 'Qualification requires hospital confirmation'] },
   { slug: 'subhankit-aarya', name: 'Dr. Subhankit Aarya', specialty: 'General Medicine', qualifications: ['MD Medicine'] },
   { slug: 'naveen-singh', name: 'Dr. Naveen Singh', specialty: 'Pediatrics', qualifications: ['MD Pediatrics'] },
   { slug: 'shoolpani-mishra', name: 'Dr. Shoolpani Mishra', specialty: 'Gastroenterology', qualifications: ['MBBS', 'MD Medicine', 'DM Gastroenterology'] },
   { slug: 'kunal-singh', name: 'Dr. Kunal Singh', specialty: 'Cardiology', qualifications: ['DM Cardiology'] },
-  { slug: 'rishab-tripathi', name: 'Dr. Rishab Tripathi', specialty: 'Orthopaedics', qualifications: ['MBBS', 'DNB'] },
-  { slug: 'essar-khan', name: 'Dr. Essar Khan', specialty: 'Nephrology', qualifications: ['MBBS', 'MD', 'DM Nephrology'] },
+  { slug: 'rishab-tripathi', name: 'Dr. Rishab Tripathi', specialty: 'Orthopaedics', designation: 'Orthopedic Surgeon', qualifications: ['MBBS', 'DNB'], image: '/assets/dr-rishab-tripathi.png', bio: 'Dr. Rishab Tripathi is an Orthopedic Surgeon with MBBS and DNB qualifications.' },
+  { slug: 'essar-khan', name: 'Dr. Essar Khan', specialty: 'Nephrology', designation: 'Nephrologist', qualifications: ['MBBS', 'MD', 'DM Nephrology'], image: '/assets/dr-essar-khan.png', bio: 'Dr. Essar Khan is a Nephrologist with MBBS, MD and DM (Nephrology) qualifications.', experience: 'Also identified as a Senior Consultant in Nephrology in Gorakhpur medical listings.' },
+  { slug: 'thakur-prashant-singh', name: 'Dr. Thakur Prashant Singh', specialty: 'Gastroenterology', designation: 'Gastroenterologist', qualifications: ['MBBS', 'MD Medicine', 'DM Gastroenterology'], image: '/assets/dr-thakur-prashant-singh.png', bio: 'Dr. Thakur Prashant Singh is a gastroenterologist with MBBS, MD (Medicine) and DM (Gastroenterology) qualifications.' },
   { slug: 'ravi-prakash-mishra', name: 'Dr. Ravi Prakash Mishra', specialty: 'Urology', qualifications: ['MBBS', 'DNB General Surgery', 'MNAMS', 'MCh Urology'] },
   { slug: 'durgesh-tripathi', name: 'Dr. Durgesh Tripathi', specialty: 'General & Laparoscopic Surgery', qualifications: ['MBBS', 'MS General Surgery'] },
   { slug: 'avishesh-singh', name: 'Dr. Avishesh Singh', specialty: 'Cardiology', qualifications: ['MBBS', 'MD Medicine', 'DM Cardiology'] },
@@ -36,6 +42,7 @@ const doctors: Doctor[] = [
   { slug: 'anamika-modi', name: 'Dr. Anamika Modi', specialty: 'Obstetrics & Gynaecology', qualifications: ['MBBS', 'DGO'] },
   { slug: 'nitya-nand', name: 'Dr. Nitya Nand', specialty: 'Plastic & Reconstructive Surgery', qualifications: ['MBBS', 'MS General Surgery', 'MCh Plastic Surgery'] },
   { slug: 'ankit-modi', name: 'Dr. Ankit Modi', specialty: 'Urology', qualifications: ['MBBS', 'MS General Surgery', 'MCh Urology', 'FMAS'] },
+  { slug: 'vijay-kumar', name: 'Dr. Vijay Kumar', specialty: 'Resident Medical Officer', designation: 'Resident Medical Officer (RMO)', qualifications: ['MBBS'], image: '/assets/dr-vijay-kumar.png', bio: 'Dr. Vijay Kumar is a Resident Medical Officer (RMO) at Jain Neuro Super Speciality Clinic, Gorakhpur, responsible for coordinating day-to-day patient care, monitoring admitted patients, assisting consultants, and supporting the clinical team in the hospital.' },
 ];
 
 const specialties = ['All specialties', ...Array.from(new Set(doctors.map((doctor) => doctor.specialty)))];
@@ -233,9 +240,11 @@ function HomePage() {
           <div className="doctor-feature-list">
             {doctors.slice(0, 4).map((doctor) => (
               <Link href={`/doctors/${doctor.slug}`} className="doctor-card" key={doctor.slug} data-testid={`card-featured-doctor-${doctor.slug}`}>
-                <div className="avatar">{initials(doctor.name)}</div>
+                <div className={`avatar ${doctor.image ? 'avatar-photo' : ''}`}>
+                  {doctor.image ? <img src={doctor.image} alt="" /> : initials(doctor.name)}
+                </div>
                 <h3>{doctor.name}</h3>
-                <p>{doctor.specialty}</p>
+                <p>{doctor.designation || doctor.specialty}</p>
               </Link>
             ))}
           </div>
@@ -304,9 +313,11 @@ function DoctorsPage() {
           <div className="directory-grid">
             {filteredDoctors.length > 0 ? filteredDoctors.map((doctor) => (
               <Link href={`/doctors/${doctor.slug}`} className="directory-card" key={doctor.slug} data-testid={`card-doctor-${doctor.slug}`}>
-                <div className="avatar">{initials(doctor.name)}</div>
+                <div className={`avatar ${doctor.image ? 'avatar-photo' : ''}`}>
+                  {doctor.image ? <img src={doctor.image} alt="" /> : initials(doctor.name)}
+                </div>
                 <h2>{doctor.name}</h2>
-                <div className="specialty">{doctor.specialty}</div>
+                <div className="specialty">{doctor.designation || doctor.specialty}</div>
                 <div className="qualifications">{doctor.qualifications.join(' · ')}</div>
                 <span className="card-link">View profile <ArrowRight size={14} /></span>
               </Link>
@@ -335,11 +346,13 @@ function DoctorDetailPage() {
         <div className="site-container">
           <Link href="/doctors" className="mb-9 inline-flex items-center gap-2 text-[12px] font-semibold text-[hsl(var(--muted-foreground))] no-underline hover:text-[hsl(var(--accent))]" data-testid="link-back-doctors"><ArrowRight size={15} className="rotate-180" /> Back to directory</Link>
           <div className="doctor-profile reveal">
-            <div className="profile-avatar" aria-hidden="true">{initials(doctor.name)}</div>
+            <div className={`profile-avatar ${doctor.image ? 'profile-photo' : ''}`} aria-hidden={doctor.image ? undefined : true}>
+              {doctor.image ? <img src={doctor.image} alt={`${doctor.name} portrait`} /> : initials(doctor.name)}
+            </div>
             <div>
               <span className="eyebrow text-[hsl(var(--accent))]">{doctor.specialty}</span>
               <h1 className="font-display">{doctor.name}</h1>
-              <p className="m-0">Specialist profile · Jain Neuromax Hospital</p>
+              <p className="m-0">{doctor.designation || 'Consultant'} · Jain Neuromax Hospital</p>
             </div>
           </div>
         </div>
@@ -349,7 +362,9 @@ function DoctorDetailPage() {
           <div>
             <span className="eyebrow text-[hsl(var(--accent))]">About this profile</span>
             <h2 className="mt-4">Information you can take into your appointment.</h2>
-            <p>This profile presents the qualification information currently verified for {doctor.name} by the hospital brief. For appointment availability, consultation fees, and any detail not shown here, please contact the hospital team or include your question in an appointment request.</p>
+            <p>{doctor.bio || `This profile presents the qualification information currently verified for ${doctor.name} by the hospital brief.`} For appointment availability, consultation fees, and any detail not shown here, please contact the hospital team or include your question in an appointment request.</p>
+            {doctor.experience && <p className="profile-note">{doctor.experience}</p>}
+            {doctor.training && <p className="profile-note">{doctor.training}</p>}
             <Link href={`/appointment?doctor=${doctor.slug}`} className="btn btn-primary mt-5" data-testid="link-doctor-book">Request an appointment <CalendarDays size={15} /></Link>
           </div>
           <div>
