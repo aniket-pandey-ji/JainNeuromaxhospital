@@ -153,9 +153,14 @@
 .specialty-card h3 { margin: 0 0 7px; font-size: 18px; font-weight: 600; }
 .specialty-card p { margin: 0; color: hsl(var(--muted-foreground)); font-size: 12px; }
 .doctors-strip { display: grid; grid-template-columns: .8fr 1.2fr; gap: 58px; align-items: start; }
-.doctor-feature-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: hsl(var(--border)); }
-.doctor-card { display: block; min-height: 185px; padding: 22px; background: hsl(var(--card)); text-decoration: none; color: inherit; transition: background-color .25s ease; }
-.doctor-card:hover { background: hsl(var(--muted)); }
+.doctor-feature-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.doctor-card { position: relative; display: block; aspect-ratio: 600 / 1333; overflow: hidden; background: hsl(var(--muted)); text-decoration: none; color: hsl(var(--primary-foreground)); }
+.doctor-card:after { position: absolute; inset: 35% 0 0; content: ''; background: linear-gradient(180deg, transparent, rgba(20, 26, 26, .9)); }
+.doctor-card:hover .doctor-card-image { transform: scale(1.035); }
+.doctor-card-image { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.doctor-card-caption { position: absolute; right: 14px; bottom: 14px; left: 14px; z-index: 1; }
+.doctor-card-caption h3 { margin: 0 0 5px; font-size: 15px; line-height: 1.35; }
+.doctor-card-caption p { margin: 0; color: rgba(250,248,243,.78); font-size: 11px; line-height: 1.45; }
 .avatar { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 25px; border-radius: 50%; background: hsl(var(--secondary)); color: hsl(var(--foreground)); font-family: var(--app-font-serif); font-size: 17px; }
 .avatar-photo { overflow: hidden; background: hsl(var(--muted)); }
 .avatar-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; }
@@ -259,7 +264,8 @@
   .section { padding-block: 68px; }
   .section-heading { display: block; margin-bottom: 28px; }
   .section-heading p { margin-top: 18px; }
-  .specialty-grid, .directory-grid, .doctor-feature-list { grid-template-columns: 1fr; }
+  .specialty-grid, .directory-grid { grid-template-columns: 1fr; }
+  .doctor-feature-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .specialty-card { min-height: 125px; }
   .interior-frame img { height: 310px; }
   .action-band { display: block; padding: 24px; }

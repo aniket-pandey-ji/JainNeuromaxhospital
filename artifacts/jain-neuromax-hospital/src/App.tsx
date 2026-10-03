@@ -20,21 +20,22 @@ type Doctor = {
   qualifications: string[];
   designation?: string;
   image?: string;
+  panelImage?: string;
   bio?: string;
   experience?: string;
   training?: string;
 };
 
 const doctors: Doctor[] = [
-  { slug: 'navneet-kala', name: 'Dr. Navneet Kala', specialty: 'Neurosurgery', designation: 'Consultant Neurosurgeon', qualifications: ['MBBS', 'MS General Surgery', 'MCh Neurosurgery'], image: '/assets/dr-navneet-kala.png', bio: 'Dr. Navneet Kala is a Consultant Neurosurgeon in Gorakhpur with MBBS, MS (General Surgery) and MCh (Neurosurgery) qualifications.', experience: '23+ years of experience in neurosurgery.', training: 'Trained at SMS Medical College, Jaipur and KGMU, Lucknow.' },
+  { slug: 'navneet-kala', name: 'Dr. Navneet Kala', specialty: 'Neurosurgery', designation: 'Consultant Neurosurgeon', qualifications: ['MBBS', 'MS General Surgery', 'MCh Neurosurgery'], image: '/assets/dr-navneet-kala.png', panelImage: '/assets/dr-navneet-kala-panel.jpg', bio: 'Dr. Navneet Kala is a Consultant Neurosurgeon in Gorakhpur with MBBS, MS (General Surgery) and MCh (Neurosurgery) qualifications.', experience: '23+ years of experience in neurosurgery.', training: 'Trained at SMS Medical College, Jaipur and KGMU, Lucknow.' },
   { slug: 'madhuri-jain', name: 'Dr. Madhuri Jain', specialty: 'Dentistry', qualifications: ['BDS', 'Qualification requires hospital confirmation'] },
   { slug: 'subhankit-aarya', name: 'Dr. Subhankit Aarya', specialty: 'General Medicine', qualifications: ['MD Medicine'] },
   { slug: 'naveen-singh', name: 'Dr. Naveen Singh', specialty: 'Pediatrics', qualifications: ['MD Pediatrics'] },
   { slug: 'shoolpani-mishra', name: 'Dr. Shoolpani Mishra', specialty: 'Gastroenterology', qualifications: ['MBBS', 'MD Medicine', 'DM Gastroenterology'] },
   { slug: 'kunal-singh', name: 'Dr. Kunal Singh', specialty: 'Cardiology', qualifications: ['DM Cardiology'] },
-  { slug: 'rishab-tripathi', name: 'Dr. Rishab Tripathi', specialty: 'Orthopaedics', designation: 'Orthopedic Surgeon', qualifications: ['MBBS', 'DNB'], image: '/assets/dr-rishab-tripathi.png', bio: 'Dr. Rishab Tripathi is an Orthopedic Surgeon with MBBS and DNB qualifications.' },
-  { slug: 'essar-khan', name: 'Dr. Essar Khan', specialty: 'Nephrology', designation: 'Nephrologist', qualifications: ['MBBS', 'MD', 'DM Nephrology'], image: '/assets/dr-essar-khan.png', bio: 'Dr. Essar Khan is a Nephrologist with MBBS, MD and DM (Nephrology) qualifications.', experience: 'Also identified as a Senior Consultant in Nephrology in Gorakhpur medical listings.' },
-  { slug: 'thakur-prashant-singh', name: 'Dr. Thakur Prashant Singh', specialty: 'Gastroenterology', designation: 'Gastroenterologist', qualifications: ['MBBS', 'MD Medicine', 'DM Gastroenterology'], image: '/assets/dr-thakur-prashant-singh.png', bio: 'Dr. Thakur Prashant Singh is a gastroenterologist with MBBS, MD (Medicine) and DM (Gastroenterology) qualifications.' },
+  { slug: 'rishab-tripathi', name: 'Dr. Rishab Tripathi', specialty: 'Orthopaedics', designation: 'Orthopedic Surgeon', qualifications: ['MBBS', 'DNB'], image: '/assets/dr-rishab-tripathi.png', panelImage: '/assets/dr-rishab-tripathi-panel.jpg', bio: 'Dr. Rishab Tripathi is an Orthopedic Surgeon with MBBS and DNB qualifications.' },
+  { slug: 'essar-khan', name: 'Dr. Essar Khan', specialty: 'Nephrology', designation: 'Nephrologist', qualifications: ['MBBS', 'MD', 'DM Nephrology'], image: '/assets/dr-essar-khan.png', panelImage: '/assets/dr-essar-khan-panel.jpg', bio: 'Dr. Essar Khan is a Nephrologist with MBBS, MD and DM (Nephrology) qualifications.', experience: 'Also identified as a Senior Consultant in Nephrology in Gorakhpur medical listings.' },
+  { slug: 'thakur-prashant-singh', name: 'Dr. Thakur Prashant Singh', specialty: 'Gastroenterology', designation: 'Gastroenterologist', qualifications: ['MBBS', 'MD Medicine', 'DM Gastroenterology'], image: '/assets/dr-thakur-prashant-singh.png', panelImage: '/assets/dr-thakur-prashant-singh-panel.jpg', bio: 'Dr. Thakur Prashant Singh is a gastroenterologist with MBBS, MD (Medicine) and DM (Gastroenterology) qualifications.' },
   { slug: 'ravi-prakash-mishra', name: 'Dr. Ravi Prakash Mishra', specialty: 'Urology', qualifications: ['MBBS', 'DNB General Surgery', 'MNAMS', 'MCh Urology'] },
   { slug: 'durgesh-tripathi', name: 'Dr. Durgesh Tripathi', specialty: 'General & Laparoscopic Surgery', qualifications: ['MBBS', 'MS General Surgery'] },
   { slug: 'avishesh-singh', name: 'Dr. Avishesh Singh', specialty: 'Cardiology', qualifications: ['MBBS', 'MD Medicine', 'DM Cardiology'] },
@@ -42,10 +43,11 @@ const doctors: Doctor[] = [
   { slug: 'anamika-modi', name: 'Dr. Anamika Modi', specialty: 'Obstetrics & Gynaecology', qualifications: ['MBBS', 'DGO'] },
   { slug: 'nitya-nand', name: 'Dr. Nitya Nand', specialty: 'Plastic & Reconstructive Surgery', qualifications: ['MBBS', 'MS General Surgery', 'MCh Plastic Surgery'] },
   { slug: 'ankit-modi', name: 'Dr. Ankit Modi', specialty: 'Urology', qualifications: ['MBBS', 'MS General Surgery', 'MCh Urology', 'FMAS'] },
-  { slug: 'vijay-kumar', name: 'Dr. Vijay Kumar', specialty: 'Resident Medical Officer', designation: 'Resident Medical Officer (RMO)', qualifications: ['MBBS'], image: '/assets/dr-vijay-kumar.png', bio: 'Dr. Vijay Kumar is a Resident Medical Officer (RMO) at Jain Neuro Super Speciality Clinic, Gorakhpur, responsible for coordinating day-to-day patient care, monitoring admitted patients, assisting consultants, and supporting the clinical team in the hospital.' },
+  { slug: 'vijay-kumar', name: 'Dr. Vijay Kumar', specialty: 'Resident Medical Officer', designation: 'Resident Medical Officer (RMO)', qualifications: ['MBBS'], image: '/assets/dr-vijay-kumar.png', panelImage: '/assets/dr-vijay-kumar-panel.jpg', bio: 'Dr. Vijay Kumar is a Resident Medical Officer (RMO) at Jain Neuro Super Speciality Clinic, Gorakhpur, responsible for coordinating day-to-day patient care, monitoring admitted patients, assisting consultants, and supporting the clinical team in the hospital.' },
 ];
 
 const specialties = ['All specialties', ...Array.from(new Set(doctors.map((doctor) => doctor.specialty)))];
+const featuredDoctors = doctors.filter((doctor) => doctor.panelImage);
 const initials = (name: string) => name.replace('Dr. ', '').split(' ').map((part) => part[0]).slice(0, 2).join('');
 
 function Header() {
@@ -238,13 +240,13 @@ function HomePage() {
             <Link href="/doctors" className="btn btn-primary mt-7" data-testid="link-dark-doctors">Explore the directory <ArrowRight size={15} /></Link>
           </div>
           <div className="doctor-feature-list">
-            {doctors.slice(0, 4).map((doctor) => (
-              <Link href={`/doctors/${doctor.slug}`} className="doctor-card" key={doctor.slug} data-testid={`card-featured-doctor-${doctor.slug}`}>
-                <div className={`avatar ${doctor.image ? 'avatar-photo' : ''}`}>
-                  {doctor.image ? <img src={doctor.image} alt="" /> : initials(doctor.name)}
+            {featuredDoctors.map((doctor) => (
+              <Link href={`/doctors/${doctor.slug}`} className="doctor-card doctor-card-portrait" key={doctor.slug} data-testid={`card-featured-doctor-${doctor.slug}`}>
+                <img className="doctor-card-image" src={doctor.panelImage} alt="" />
+                <div className="doctor-card-caption">
+                  <h3>{doctor.name}</h3>
+                  <p>{doctor.designation || doctor.specialty}</p>
                 </div>
-                <h3>{doctor.name}</h3>
-                <p>{doctor.designation || doctor.specialty}</p>
               </Link>
             ))}
           </div>
