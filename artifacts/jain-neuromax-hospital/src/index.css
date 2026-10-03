@@ -130,9 +130,13 @@
 .section-quiet { background: hsl(var(--muted)); }
 .section-dark { background: hsl(var(--foreground)); color: hsl(var(--primary-foreground)); }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 42px; }
+.section-heading.route-heading { margin-bottom: 30px; }
 .section-heading h2 { max-width: 640px; margin: 13px 0 0; font-size: clamp(30px, 4.5vw, 52px); line-height: 1.08; letter-spacing: -.035em; }
 .section-heading p { max-width: 385px; margin: 0; color: hsl(var(--muted-foreground)); line-height: 1.65; }
 .section-dark .section-heading p { color: rgba(250,248,243,.62); }
+.specialty-showcase { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 16px 18px; margin-bottom: 36px; }
+.specialty-showcase-card { align-self: start; overflow: hidden; margin: 0; padding: 7px; border: 1px solid hsl(var(--border)); background: hsl(var(--card)); }
+.specialty-showcase-card img { display: block; width: 100%; height: auto; }
 .intro-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 72px; align-items: center; }
 .interior-frame { position: relative; padding: 0 0 24px 24px; }
 .interior-frame:before { content: ''; position: absolute; inset: 24px 0 0 0; border: 1px solid hsl(var(--secondary)); }
@@ -266,6 +270,7 @@
   .section-heading p { margin-top: 18px; }
   .specialty-grid, .directory-grid { grid-template-columns: 1fr; }
   .doctor-feature-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .specialty-showcase { grid-template-columns: 1fr; gap: 12px; margin-bottom: 28px; }
   .specialty-card { min-height: 125px; }
   .interior-frame img { height: 310px; }
   .action-band { display: block; padding: 24px; }

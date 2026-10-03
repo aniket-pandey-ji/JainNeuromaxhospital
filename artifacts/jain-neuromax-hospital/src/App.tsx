@@ -47,6 +47,12 @@ const doctors: Doctor[] = [
 ];
 
 const specialties = ['All specialties', ...Array.from(new Set(doctors.map((doctor) => doctor.specialty)))];
+const specialtyPanels = [
+  { image: '/assets/specialties-internal-neuro.webp', alt: 'Internal medicine, neurosurgery and neurology.' },
+  { image: '/assets/specialties-psychiatry-pulmonology.webp', alt: 'Psychiatry and pulmonology.' },
+  { image: '/assets/specialties-surgical-urology-blood-bank.webp', alt: 'Surgical services, urology and blood bank.' },
+  { image: '/assets/specialties-nephrology-ophthalmology-orthopedics-pediatrics.webp', alt: 'Nephrology, ophthalmology, orthopedics and pediatrics.' },
+];
 const featuredDoctors = doctors.filter((doctor) => doctor.panelImage);
 const initials = (name: string) => name.replace('Dr. ', '').split(' ').map((part) => part[0]).slice(0, 2).join('');
 
@@ -212,11 +218,18 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section section-quiet">
+      <section id="specialties" className="section section-quiet">
         <div className="site-container">
-          <div className="section-heading">
-            <div><span className="eyebrow text-[hsl(var(--accent))]">Find your route</span><h2 className="font-display">Start with the care you are looking for.</h2></div>
-            <p>Use the directory to explore verified specialist profiles, then request an appointment directly.</p>
+          <div className="section-heading route-heading">
+            <div><span className="eyebrow text-[hsl(var(--accent))]">Specialty services</span><h2 className="font-display">Specialty care, clearly organized.</h2></div>
+            <p>Browse the clinical specialties shown below, review verified doctor profiles, and submit an appointment request to the hospital team.</p>
+          </div>
+          <div className="specialty-showcase" aria-label="Clinical specialty image panels">
+            {specialtyPanels.map((panel) => (
+              <figure className="specialty-showcase-card" key={panel.image}>
+                <img src={panel.image} alt={panel.alt} />
+              </figure>
+            ))}
           </div>
           <div className="specialty-grid">
             {specialties.slice(1, 9).map((specialty, index) => (
