@@ -232,7 +232,7 @@ function HomePage() {
       <section className="section section-dark">
         <div className="site-container doctors-strip">
           <div>
-            <span className="eyebrow">Meet your specialist</span>
+            <span className="eyebrow">Our leading panel of professionals</span>
             <h2 className="mt-4 font-display text-[clamp(32px,4vw,49px)] leading-[1.1] tracking-[-.04em]">A little more certainty for the next conversation.</h2>
             <p className="mt-5 max-w-[390px] text-[14px] leading-[1.75] text-[rgba(250,248,243,.62)]">See each verified profile, the qualifications we have on record, and what to bring to your appointment.</p>
             <Link href="/doctors" className="btn btn-primary mt-7" data-testid="link-dark-doctors">Explore the directory <ArrowRight size={15} /></Link>
