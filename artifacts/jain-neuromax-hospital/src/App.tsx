@@ -1,6 +1,6 @@
-import { type FormEvent, type ReactNode, useEffect, useMemo, useState } from 'react';
+import { type ReactNode, useEffect, useMemo, useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ArrowRight, CalendarDays, Check, ChevronRight, Clock3, HeartPulse, MapPin, Menu, Phone, Search, ShieldCheck, Stethoscope, X } from 'lucide-react';
+import { ArrowRight, CalendarDays, ChevronRight, HeartPulse, MapPin, Menu, Phone, Search, ShieldCheck, Stethoscope, X } from 'lucide-react';
 import { Link, Route, Switch, useLocation, useParams, Router as WouterRouter } from 'wouter';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
@@ -12,6 +12,7 @@ const interiorImage = '/assets/hospital-interior.png';
 const logoImage = '/assets/jain-neuromax-logo.png';
 const hospitalPhoneHref = 'tel:+916307099300';
 const hospitalPhoneLabel = '+91 63070 99300';
+const appointmentFormUrl = 'https://forms.gle/cjHvRYH1mnYq9CKE7';
 
 const queryClient = new QueryClient();
 
@@ -58,13 +59,28 @@ const specialtyPanels = [
 const featuredDoctors = doctors.filter((doctor) => doctor.panelImage);
 const initials = (name: string) => name.replace('Dr. ', '').split(' ').map((part) => part[0]).slice(0, 2).join('');
 
+type AppointmentLinkProps = {
+  children: ReactNode;
+  className?: string;
+  testId?: string;
+  onClick?: () => void;
+};
+
+function AppointmentLink({ children, className, testId, onClick }: AppointmentLinkProps) {
+  return (
+    <a href={appointmentFormUrl} target="_blank" rel="noopener noreferrer" className={className} onClick={onClick} data-testid={testId}>
+      {children}
+      <span className="sr-only"> (opens in a new tab)</span>
+    </a>
+  );
+}
+
 function Header() {
   const [location] = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const navItems = [
     { label: 'Our hospital', href: '/' },
     { label: 'Find a doctor', href: '/doctors' },
-    { label: 'Appointments', href: '/appointment' },
   ];
   return (
     <>
@@ -90,11 +106,17 @@ function Header() {
                 {item.label}
               </Link>
             ))}
+            <AppointmentLink
+              className={`text-[12px] font-semibold tracking-[.04em] no-underline transition-colors hover:text-[hsl(var(--accent))] ${location === '/appointment' ? 'text-[hsl(var(--primary))]' : 'text-[hsl(var(--muted-foreground))]'}`}
+              testId="link-nav-appointments"
+            >
+              Appointments
+            </AppointmentLink>
           </nav>
           <div className="flex items-center gap-2">
-            <Link href="/appointment" className="btn btn-primary hidden min-h-[40px] text-[11px] sm:inline-flex" data-testid="link-header-book">
+            <AppointmentLink className="btn btn-primary hidden min-h-[40px] text-[11px] sm:inline-flex" testId="link-header-book">
               <CalendarDays size={15} /> Book appointment
-            </Link>
+            </AppointmentLink>
             <button type="button" className="hidden min-h-[40px] items-center gap-2 border-0 bg-transparent p-2 text-[hsl(var(--foreground))] nav-mobile-cta" onClick={() => setMenuOpen((open) => !open)} aria-expanded={menuOpen} aria-label="Toggle menu" data-testid="button-mobile-menu">
               {menuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -107,6 +129,9 @@ function Header() {
                 {item.label}
               </Link>
             ))}
+            <AppointmentLink onClick={() => setMenuOpen(false)} testId="link-mobile-appointments" className="block border-b border-[hsl(var(--border))] py-4 text-sm font-semibold text-[hsl(var(--foreground))] no-underline last:border-0">
+              Appointments
+            </AppointmentLink>
           </nav>
         )}
       </header>
@@ -127,7 +152,7 @@ function Footer() {
         <div>
           <h3>Patient access</h3>
           <Link href="/doctors" data-testid="link-footer-doctors">Find a doctor</Link>
-          <Link href="/appointment" data-testid="link-footer-appointment">Book an appointment</Link>
+          <AppointmentLink testId="link-footer-appointment">Book an appointment</AppointmentLink>
           <a href={hospitalPhoneHref} data-testid="link-footer-call">Call hospital · {hospitalPhoneLabel}</a>
         </div>
         <div>
@@ -169,7 +194,7 @@ function HomePage() {
             <h1 className="font-display text-balance">The right care starts with being heard.</h1>
             <p className="hero-copy">Jain Neuromax Hospital brings specialist consultations into a considered, welcoming setting — with clear information for the next step.</p>
             <div className="hero-actions">
-              <Link href="/appointment" className="btn btn-primary" data-testid="link-hero-appointment">Book an appointment <ArrowRight size={16} /></Link>
+              <AppointmentLink className="btn btn-primary" testId="link-hero-appointment">Book an appointment <ArrowRight size={16} /></AppointmentLink>
               <Link href="/doctors" className="btn btn-outline-light" data-testid="link-hero-doctors">Find a doctor</Link>
               <a href="#location" className="btn btn-outline-light" data-testid="link-hero-location">Find location <MapPin size={15} /></a>
             </div>
@@ -249,7 +274,7 @@ function HomePage() {
         <div className="site-container photo-band-inner">
           <span className="eyebrow">Your next step, made clear</span>
           <h2 className="font-display">Come in with questions. Leave with a plan.</h2>
-          <Link href="/appointment" className="btn btn-light" data-testid="link-band-appointment">Request an appointment <CalendarDays size={15} /></Link>
+          <AppointmentLink className="btn btn-light" testId="link-band-appointment">Request an appointment <CalendarDays size={15} /></AppointmentLink>
         </div>
       </section>
 
@@ -263,7 +288,7 @@ function HomePage() {
             <div className="location-status">Location details available on confirmation</div>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href={hospitalPhoneHref} className="btn btn-outline" data-testid="link-location-contact"><Phone size={15} /> Call hospital</a>
-              <Link href="/appointment" className="btn btn-primary" data-testid="link-location-appointment">Book a visit <ArrowRight size={15} /></Link>
+              <AppointmentLink className="btn btn-primary" testId="link-location-appointment">Book a visit <ArrowRight size={15} /></AppointmentLink>
             </div>
           </div>
         </div>
@@ -359,7 +384,7 @@ function DoctorDetailPage() {
             <p>{doctor.bio || `This profile presents the qualification information currently verified for ${doctor.name} by the hospital brief.`} For appointment availability, consultation fees, and any detail not shown here, please contact the hospital team or include your question in an appointment request.</p>
             {doctor.experience && <p className="profile-note">{doctor.experience}</p>}
             {doctor.training && <p className="profile-note">{doctor.training}</p>}
-            <Link href={`/appointment?doctor=${doctor.slug}`} className="btn btn-primary mt-5" data-testid="link-doctor-book">Request an appointment <CalendarDays size={15} /></Link>
+            <AppointmentLink className="btn btn-primary mt-5" testId="link-doctor-book">Request an appointment <CalendarDays size={15} /></AppointmentLink>
           </div>
           <div>
             <h2>Qualifications</h2>
@@ -373,33 +398,23 @@ function DoctorDetailPage() {
       <section className="section section-quiet">
         <div className="site-container action-band">
           <div><span className="eyebrow">Ready when you are</span><p>Share a preferred time and the hospital team can follow up with the next details.</p></div>
-          <Link href={`/appointment?doctor=${doctor.slug}`} className="btn btn-light" data-testid="link-profile-appointment">Book with {doctor.name.replace('Dr. ', '')} <ArrowRight size={15} /></Link>
+          <AppointmentLink className="btn btn-light" testId="link-profile-appointment">Book with {doctor.name.replace('Dr. ', '')} <ArrowRight size={15} /></AppointmentLink>
         </div>
       </section>
     </>
   );
 }
 
-type FormState = { name: string; email: string; phone: string; specialty: string; date: string; notes: string };
-
 function AppointmentPage() {
   const [params] = useState(() => new URLSearchParams(window.location.search));
   const preselectedDoctor = doctors.find((doctor) => doctor.slug === params.get('doctor'));
-  const [form, setForm] = useState<FormState>({ name: '', email: '', phone: '', specialty: preselectedDoctor?.specialty || '', date: '', notes: '' });
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const updateField = (field: keyof FormState, value: string) => setForm((current) => ({ ...current, [field]: value }));
-  const submit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setStatus('loading');
-    window.setTimeout(() => setStatus(form.email.toLowerCase().includes('error') ? 'error' : 'success'), 1100);
-  };
   return (
     <>
       <section className="page-hero">
         <div className="site-container">
           <span className="eyebrow">Appointment request</span>
           <h1 className="font-display">Tell us how we can help you begin.</h1>
-          <p>This is a request, not a confirmed appointment. The hospital team will need to confirm availability and any details with you.</p>
+          <p>Complete the hospital’s appointment request form. Your visit is not booked until the hospital team contacts you to confirm availability.</p>
         </div>
       </section>
       <section className="section">
@@ -407,29 +422,26 @@ function AppointmentPage() {
           <aside className="appointment-aside">
             <span className="eyebrow text-[hsl(var(--accent))]">A clear first step</span>
             <h2 className="font-display">Make room for the right conversation.</h2>
-            <p>Share the basics below. You can tell us what you are looking for, request a preferred date, and leave a note for the team.</p>
+            <p>Share your specialty, preferred date, and contact details in the appointment form so the hospital team can follow up.</p>
             <div className="detail-list mt-8">
-              <div><CalendarDays size={18} /><span><strong>Preferred date</strong>Let the team know when you would ideally like to visit.</span></div>
-              <div><Clock3 size={18} /><span><strong>Follow-up from the team</strong>Your request will be reviewed before anything is confirmed.</span></div>
-              <div><ShieldCheck size={18} /><span><strong>Your information</strong>Only share what is useful for this first request.</span></div>
+              <div><CalendarDays size={18} /><span><strong>Preferred date</strong>Tell the hospital when you would ideally like to visit.</span></div>
+              <div><ChevronRight size={18} /><span><strong>Follow-up from the team</strong>Your request will be reviewed before anything is confirmed.</span></div>
+              <div><ShieldCheck size={18} /><span><strong>Your information</strong>Only share the details needed for your request.</span></div>
             </div>
           </aside>
-          <form className="appointment-form" onSubmit={submit} noValidate>
-            {status === 'success' && <div className="form-status success" role="status" data-testid="status-appointment-success"><Check size={17} className="mr-2 inline" /> Your request has been recorded for this demo. A real hospital connection can be added here.</div>}
-            {status === 'error' && <div className="form-status error" role="alert" data-testid="status-appointment-error">We could not complete this demo request. Please check your details and try again.</div>}
-            <div className="form-grid">
-              <div className="field"><label htmlFor="patient-name">Your name</label><input id="patient-name" required value={form.name} onChange={(event) => updateField('name', event.target.value)} placeholder="Full name" data-testid="input-patient-name" /></div>
-              <div className="field"><label htmlFor="patient-email">Email address</label><input id="patient-email" type="email" required value={form.email} onChange={(event) => updateField('email', event.target.value)} placeholder="you@example.com" data-testid="input-patient-email" /></div>
-              <div className="field"><label htmlFor="patient-phone">Phone number</label><input id="patient-phone" type="tel" required value={form.phone} onChange={(event) => updateField('phone', event.target.value)} placeholder="Your contact number" data-testid="input-patient-phone" /></div>
-              <div className="field"><label htmlFor="patient-specialty">Specialty</label><select id="patient-specialty" required value={form.specialty} onChange={(event) => updateField('specialty', event.target.value)} data-testid="select-patient-specialty"><option value="">Choose a specialty</option>{specialties.slice(1).map((item) => <option key={item}>{item}</option>)}</select></div>
-              <div className="field"><label htmlFor="patient-date">Preferred date</label><input id="patient-date" type="date" value={form.date} onChange={(event) => updateField('date', event.target.value)} data-testid="input-preferred-date" /></div>
-              <div className="field full"><label htmlFor="patient-message">Message for the hospital team <span className="font-normal text-[hsl(var(--muted-foreground))]">(optional)</span></label><textarea id="patient-message" value={form.notes} onChange={(event) => updateField('notes', event.target.value)} placeholder="A short note about what you need help with" data-testid="textarea-appointment-message" /></div>
-            </div>
+          <div className="appointment-form">
+            <span className="eyebrow text-[hsl(var(--accent))]">Appointment form</span>
+            <h2 className="mb-3 mt-4 font-display text-3xl">Continue to the hospital form.</h2>
+            <p className="text-sm leading-7 text-[hsl(var(--muted-foreground))]">
+              {preselectedDoctor
+                ? `You came from ${preselectedDoctor.name}’s profile. Mention ${preselectedDoctor.name} in your request if you would like to consult with this doctor.`
+                : 'The form opens in a new tab. Add your contact details and appointment preferences there.'}
+            </p>
             <div className="form-submit">
               <small className="text-[hsl(var(--muted-foreground))]">No appointment is confirmed until the hospital team contacts you.</small>
-              <button type="submit" className="btn btn-primary" disabled={status === 'loading'} data-testid="button-submit-appointment">{status === 'loading' ? 'Sending request…' : 'Send appointment request'} <ArrowRight size={15} /></button>
+              <AppointmentLink className="btn btn-primary" testId="link-google-appointment-form">Open appointment form <ArrowRight size={15} /></AppointmentLink>
             </div>
-          </form>
+          </div>
         </div>
       </section>
     </>
