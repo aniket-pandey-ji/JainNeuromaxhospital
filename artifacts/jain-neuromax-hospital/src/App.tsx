@@ -10,6 +10,8 @@ import NotFound from '@/pages/not-found';
 const facadeImage = '/assets/hospital-facade.png';
 const interiorImage = '/assets/hospital-interior.png';
 const logoImage = '/assets/jain-neuromax-logo.png';
+const hospitalPhoneHref = 'tel:+916307099300';
+const hospitalPhoneLabel = '+91 63070 99300';
 
 const queryClient = new QueryClient();
 
@@ -126,7 +128,7 @@ function Footer() {
           <h3>Patient access</h3>
           <Link href="/doctors" data-testid="link-footer-doctors">Find a doctor</Link>
           <Link href="/appointment" data-testid="link-footer-appointment">Book an appointment</Link>
-          <button type="button" className="block border-0 bg-transparent p-0 text-left text-[13px] leading-[1.7] text-[rgba(250,248,243,.63)] hover:text-[hsl(var(--secondary))]" onClick={() => window.dispatchEvent(new CustomEvent('open-contact-modal'))} data-testid="button-footer-call">Call hospital</button>
+          <a href={hospitalPhoneHref} data-testid="link-footer-call">Call hospital · {hospitalPhoneLabel}</a>
         </div>
         <div>
           <h3>At the hospital</h3>
@@ -141,39 +143,16 @@ function Footer() {
   );
 }
 
-function ContactModal({ onClose }: { onClose: () => void }) {
-  return (
-    <div className="modal-backdrop" role="presentation" onMouseDown={onClose}>
-      <div className="modal reveal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" onMouseDown={(event) => event.stopPropagation()}>
-        <span className="eyebrow text-[hsl(var(--accent))]">Hospital contact</span>
-        <h2 id="contact-modal-title">The hospital number will be added here.</h2>
-        <p>We have not been given a verified phone number yet. Please use the appointment request while contact details are being confirmed by the hospital.</p>
-        <div className="modal-actions">
-          <button type="button" className="btn btn-outline" onClick={onClose} data-testid="button-close-contact">Close</button>
-          <Link href="/appointment" className="btn btn-primary" onClick={onClose} data-testid="link-contact-appointment">Request an appointment <ArrowRight size={15} /></Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function AppShell({ children }: { children: ReactNode }) {
-  const [contactOpen, setContactOpen] = useState(false);
   const [location] = useLocation();
-  useEffect(() => {
-    const openHandler = () => setContactOpen(true);
-    window.addEventListener('open-contact-modal', openHandler);
-    return () => window.removeEventListener('open-contact-modal', openHandler);
-  }, []);
   return (
     <div className="site-shell">
       <Header />
       <main>{children}</main>
       <Footer />
-      <button type="button" className="emergency-bar" onClick={() => setContactOpen(true)} aria-label="Emergency Contact — Add Number" data-testid="button-emergency-contact">
-        <HeartPulse size={17} /> Emergency Contact — Add Number
-      </button>
-      {contactOpen && <ContactModal onClose={() => setContactOpen(false)} />}
+      <a href={hospitalPhoneHref} className="emergency-bar" aria-label={`Call Jain Neuromax Hospital at ${hospitalPhoneLabel}`} data-testid="link-emergency-contact">
+        <HeartPulse size={17} /> Emergency contact · {hospitalPhoneLabel}
+      </a>
       <span className="sr-only" data-testid="text-current-route">{location}</span>
     </div>
   );
@@ -283,7 +262,7 @@ function HomePage() {
             <p>The facade and entrance pictured here are the hospital’s actual building. For an exact address, directions, parking or access questions, please confirm details with the hospital team before travelling.</p>
             <div className="location-status">Location details available on confirmation</div>
             <div className="mt-6 flex flex-wrap gap-3">
-              <button type="button" className="btn btn-outline" onClick={() => window.dispatchEvent(new CustomEvent('open-contact-modal'))} data-testid="button-location-contact"><Phone size={15} /> Call hospital</button>
+              <a href={hospitalPhoneHref} className="btn btn-outline" data-testid="link-location-contact"><Phone size={15} /> Call hospital</a>
               <Link href="/appointment" className="btn btn-primary" data-testid="link-location-appointment">Book a visit <ArrowRight size={15} /></Link>
             </div>
           </div>

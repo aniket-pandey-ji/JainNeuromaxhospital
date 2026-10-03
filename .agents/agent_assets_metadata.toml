@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "4gtODdZYUApq2w7xpw8TI"
+uri = "file://artifacts/jain-neuromax-hospital/public/specialty-services/index.html"
+type = "html"
+title = "Jain Neuromax Hospital — Standalone Specialty Services"
+description = "A single-file specialty services page with embedded hospital branding and collage images, responsive styling, direct specialty links, and the emergency call number."
+logical_id = "72a2b93b-6a2b-45da-9875-05da097658ce"
+content_hash = "sha256:dba397b9fbca729d061314ba055dc24b8b17b2e96f9d516b19fee308a99190a3"
+size = 490014
+mtime_ms = 1791010597710
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:494bc12d-5f61-4b89-b169-f9db3d7e5ca4/72a2b93b-6a2b-45da-9875-05da097658ce/7726d464-a2be-4bfc-b6b3-1e94563592c2"
+storage_version_token = "1791010687937584"
+content_type = "text/html"

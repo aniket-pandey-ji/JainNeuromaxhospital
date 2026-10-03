@@ -1,0 +1,1 @@
+- [CodeExecution file paths](code-execution-file-paths.md) — pass explicit paths to impure filesystem work; don't assume `process.cwd()` or stream large base64 through shell output.
